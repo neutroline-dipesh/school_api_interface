@@ -4,6 +4,7 @@ import NoticeAndEvent from "./NoticeAndEvent.json";
 import "./EventBody.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import moment from "moment";
 
 function EventBody() {
   const events = NoticeAndEvent.events;
@@ -31,7 +32,7 @@ function EventBody() {
         return (
           <Card key={index}>
             <CardHeader>
-              {item.event_date}
+              {moment(item.event_date).format("LL")}
               <br />
               <br />
               <br />

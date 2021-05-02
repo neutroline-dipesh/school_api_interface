@@ -15,6 +15,7 @@ import { HiSpeakerphone } from "react-icons/hi";
 import DefaultMidblock from "./DefaultMidblock";
 import MidNotice from "./MidNotice";
 import axios from "axios";
+import moment from "moment";
 
 function NoticeBody() {
   const [mouseOver, setMouseOver] = useState(false);
@@ -59,7 +60,7 @@ function NoticeBody() {
               onMouseOut={handleMouseOut}
             >
               <CardHeader>
-                {item.notice_date}
+                {moment(item.notice_date).format("LL")}
                 <br />
                 <br />
                 <br />

@@ -17,6 +17,7 @@ import image from "../../assets/pictures/blog1.jpg";
 import { BlogModal } from "./BlogModal";
 import IconButton from "@material-ui/core/IconButton";
 import BlogData from "./BlogData.json";
+import moment from "moment";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -146,7 +147,7 @@ export default function Blog() {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(blog);
+  // console.log(blog);
 
   return (
     <div className="Blog">
@@ -199,7 +200,7 @@ export default function Blog() {
                           color="textSecondary"
                           component="p"
                         >
-                          {item.posted_date}
+                          {moment(item.posted_date).format("LL")}
                         </Typography>
                       </Box>
                     </Box>

@@ -4,6 +4,7 @@ import JobCard from "./JobCard";
 import JobsData from "./jobs.json";
 import PriceCard from "./PriceCard";
 import axios from "axios";
+import moment from "moment";
 
 class Carrer extends Component {
   state = {
@@ -50,7 +51,9 @@ class Carrer extends Component {
                       department={item.department}
                       title={item.title}
                       job_id={item.job_id}
-                      psted_date={item.psted_date}
+                      psted_date={moment(item.psted_date)
+                        .subtract(10, "days")
+                        .calendar()}
                       status={item.status.toString()}
                       description={item.description}
                     />
