@@ -1,0 +1,19 @@
+.custom-tab li{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 990px){
+.custom-nav-link{
+    padding: 8px 3px;
+    font-size: 15px;
+}
+.custom-tab{
+    padding-top: 0;
+}
+}
+
+@media only screen and (max-width: 770px){
+    .custom-nav-link{
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+.JobDesc-title{
+    
+    color: #6d2d2d;
+}
+.JobDesc-title h3{
+    font-weight: bolder;
+}
+.JobDesc{
+    font-size: 20px;
+    font-style: normal;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.JobDesc-body{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+    line-height: 1.5;
+}
+.JobDesc-preferences{
+    line-height: 1.3;
+}
+
+.JobDesc-applynow{
+    font-size: 20px;
+}
+.ApplyForm-submit{
+    font-size: 20px;
+}

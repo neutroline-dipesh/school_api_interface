@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.staff-sidebarList .link-modified {
+  text-decoration: none;
+}
+.staffPage {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 250px 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1.6fr;
+  grid-template-areas:
+    "sidebar aboutUsBody aboutUsBody aboutUsBody"
+    "sidebar aboutUsBody aboutUsBody aboutUsBody";
+}
+
+.staff-sidebar {
+  height: auto;
+  background-color: #1886de;
+  opacity: 0.8;
+  grid-area: sidebar;
+  padding-top: 50%;
+}
+
+.staffPage .mb-2,
+.my-2 {
+  margin-bottom: -2rem !important;
+}
+.staffPage ul {
+  list-style-type: none;
+}
+
+.staffBody {
+  grid-area: aboutUsBody;
+  background-color: #e9ecef;
+}
+.staffBody .jumbotron {
+  height: 100%;
+  justify-items: start;
+  padding: 1em 2em;
+}
+.staffBody .jumbotron p {
+  font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.staffBody img {
+  height: 60vh;
+  width: auto;
+  float: center;
+  padding-left: 15%;
+  padding-bottom: 10px;
+}
+
+.staffBody .row {
+  margin: 0;
+}
+.staff-sidebarList {
+  width: 100%;
+  height: 100%;
+}
+
+.staff-sidebarList .single-row {
+  color: white;
+  height: 35px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+  padding-left: 40px;
+  font-size: small;
+  position: relative;
+}
+
+.staff-sidebarList .single-row:hover {
+  color: #f3e21b;
+  cursor: pointer;
+}
+
+.single-row .active span {
+  color: #f4d03f;
+}
+.single-row span {
+  color: #fff;
+}
+/*
+/* heading of Staffs */
+.staff-head {
+  font-family: "Open Sans Condensed";
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 30px 0px;
+  color: #ffcb06;
+  text-align: center;
+}
+/* css to manage the tabs */
+.staffPage .nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2%;
+  list-style: none;
+}
+
+.staffPage .nav-link:hover {
+  cursor: pointer;
+  background-color: #ffcb07;
+}
+.staffPage .nav-item:active {
+  background-color: #fff;
+}
+/* css to manage the card in the page */
+.staffBody img {
+  float: inline-start;
+  height: 100%;
+  width: 36.33%;
+  padding: 0;
+  /* padding-bottom: 10px; */
+}
+/* css to manage the card itself */
+.staffPage .card-body {
+  position: absolute;
+  margin-left: 36%;
+  padding: 40px;
+}
+
+.staffCard {
+  height: 23vh;
+}
+
+.staffCard .card-text {
+  font-size: 15px;
+}
+
+/* css for column padding */
+.staffPage .col-sm-4 {
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 1080px) {
+  .staff-sidebar {
+    display: none;
+  }
+  .staff-head {
+    text-align: center;
+    padding: 1.5em;
+  }
+
+  .staffPage {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " aboutUsBody  aboutUsBody ";
+  }
+}
+@media screen and (max-width: 900px) {
+  .staffPage .nav {
+    padding-top: 8%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .staff-sidebarList .single-row {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    padding-left: 20px;
+    font-size: small;
+    position: relative;
+  }
+}

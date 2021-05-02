@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.founder-sidebarList .link-modified{
+  text-decoration:none;
+}
+
+.founderMessagePage {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 250px 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1.6fr;
+  grid-template-areas:
+    "sidebar aboutUsBody aboutUsBody aboutUsBody"
+    "sidebar aboutUsBody aboutUsBody aboutUsBody";
+}
+
+.founder-sidebar {
+  height: auto;
+  background-color: #1886de;
+  opacity: 0.8;
+  grid-area: sidebar;
+  padding-top: 50%;
+}
+
+.founderBody {
+  grid-area: aboutUsBody;
+}
+.founderBody .jumbotron {
+  height: 100%;
+  justify-items: start;
+  padding: 1em 2em;
+  background-color: #fff;
+  margin:0;
+}
+.founderBody .jumbotron p {
+  font-size: 1em;
+  text-align: justify;
+}
+
+.founderBody .jumbotron h1{
+  font-family: "Open Sans Condensed";
+  font-size: 2.5em;
+  font-weight: 700;
+  padding-top: 30px;
+  color:#FFCB06;
+}
+.founderBody img {
+  height: 40vh;
+  width: auto;
+  float: right;
+  padding-left: 35px;
+  padding-bottom: 10px;
+}
+
+.founder-sidebarList {
+  width: 100%;
+  height: 100%;
+}
+
+.founder-sidebarList .single-row {
+  color: white;
+  height: 35px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+  padding-left: 40px;
+  font-size: small;
+  position: relative;
+}
+
+.founder-sidebarList .single-row:hover {
+  color: #f3e21b;
+  cursor: pointer;
+}
+
+.single-row .active span {
+  color: #f4d03f;
+}
+
+.single-row span {
+  color: white;
+}
+
+@media screen and (max-width: 1080px) {
+  .founder-sidebar {
+    display: none;
+  }
+
+  .founderMessagePage {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " aboutUsBody  aboutUsBody ";
+  }
+
+  .founderBody img {
+    height: 55%;
+    width: 100%;
+    float: left;
+    min-width: 0%;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 20px;
+  }
+
+  .jumbotron h1 {
+    font-size: 25px;
+  }
+  .founderBody .jumbotron h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .founder-sidebarList .single-row {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    padding-left: 20px;
+    font-size: small;
+    position: relative;
+  }
+}

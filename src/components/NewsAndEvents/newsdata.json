@@ -1,0 +1,34 @@
+{
+  "newsdata": [
+    {
+      "image": "./images/news.png",
+      "date": "DEC 1, 2020",
+      "title": "Neutroline School Shares 2019-2020 Annual Report",
+      "detail": "George School shared the 2019-2020 Annual Report with members of the community this week. It was a remarkable year both in student and faculty achievements and also in the support the school received from the community.",
+      "path": "/newsPage"
+    },
+    {
+      "image": "./images/Event.jpg",
+      "date": "DEC 2, 2020",
+      "title": "Neutroline 2077 Result Publication",
+      "detail": "George School shared the 2019-2020 Annual Report with members of the community this week. It was a remarkable year both in student and faculty achievements and also in the support the school received from the community.",
+      "path": ""
+    }
+  ],
+  "slidingImages":[
+    {
+      "src": "./images/covidnews.jpg",
+      "altText": "Slide 1",
+      "key": "1",
+      "caption": "",
+      "header": ""
+    },
+    {
+      "src": "./images/newsandevents.jpg",
+      "altText": "Slide 2",
+      "key": "2",
+      "caption": "",
+      "header": ""
+    }
+  ]
+}

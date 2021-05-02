@@ -1,0 +1,40 @@
+.online-loginpage {
+  padding: 2em;
+}
+
+.heading h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+  font-size: 3em;
+  background-color: white;
+  color: #ffcb06;
+}
+.line {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.username {
+  margin-left: 30px;
+  margin-top: 50px;
+}
+.username > input {
+  margin-left: 80px;
+}
+.password {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.password > input {
+  margin-left: 20px;
+}
+.login__submit__container {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+@media screen and (max-width: 720px) {
+  .rightSideImage {
+    display: none;
+  }
+}

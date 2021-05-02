@@ -1,0 +1,219 @@
+.adminMemberPage {
+  display: grid;
+  grid-template-rows: 250px 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1.6fr;
+  grid-template-areas:
+    "sidebar aboutUsBody aboutUsBody aboutUsBody"
+    "sidebar aboutUsBody aboutUsBody aboutUsBody";
+}
+
+.admin-sidebar {
+  height: auto;
+  background-color: #1886de;
+  opacity: 0.8;
+  grid-area: sidebar;
+  padding-top: 50%;
+}
+
+.admin-sidebarList .link-modified {
+  text-decoration: none;
+}
+
+.adminMemberPage .mb-2,
+.my-2 {
+  margin-bottom: -2rem !important;
+}
+.adminMemberPage ul {
+  list-style-type: none;
+}
+
+.comitteeMessage h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 40px;
+}
+
+.comitteeMessage {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  background: linear-gradient(to right, #525252b0, #797979b0);
+  width: 100%;
+  color: white;
+  box-shadow: 4px 4px #000000;
+  opacity: 0.9;
+  padding: 22px;
+  line-height: 1.8;
+}
+.comitteeMessage h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 40px;
+}
+
+.comitteeMessage p {
+  font-size: 20px;
+  font-family: "roboto";
+}
+
+.adminBody {
+  grid-area: aboutUsBody;
+  background: #e9ecef;
+}
+.adminBody .jumbotron {
+  height: 100%;
+  justify-items: start;
+  padding: 1em 2em;
+}
+.adminBody .jumbotron p {
+  font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.adminBody .jumbotron h1 {
+  font-size: 40px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.admin-sidebarList {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.admin-sidebarList .adminSingle-row {
+  color: white;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  font-size: 15px;
+  position: relative;
+}
+
+.admin-sidebarList .adminSingle-row:hover {
+  color: #f3e21b;
+  cursor: pointer;
+}
+
+.adminSingle-row .active span {
+  color: #f4d03f;
+}
+.adminSingle-row span {
+  color: #fff;
+}
+
+.adminStaffCardContainer {
+  margin: 0;
+}
+/* heading of Staffs */
+.adminBody .container-fluid hr {
+  margin-top: 2rem;
+}
+#admin-head {
+  text-align: start;
+  padding-left: 2%;
+}
+
+/* css to manage the card in the page */
+.adminBody .adminCard img {
+  float: inline-start;
+  height: 100%;
+  width: 36.33%;
+  padding: 0;
+}
+/* css to manage the card itself */
+.adminMemberPage .card-body {
+  position: absolute;
+  margin-left: 36%;
+  padding: 40px;
+}
+
+.adminCard {
+  height: 23vh;
+  transition: 0.7s ease all;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.adminCard:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05, 1.05);
+}
+
+.adminCard .card-text {
+  font-size: 15px;
+}
+
+/* css for column padding */
+.adminMemberPage .col-sm-4 {
+  padding-bottom: 2%;
+}
+
+.adminBody .container {
+  max-width: 1500px;
+  padding: 6% 3%;
+  height: auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .admin-sidebar {
+    display: none;
+  }
+
+  .adminMemberPage {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " aboutUsBody  aboutUsBody ";
+  }
+}
+@media screen and (max-width: 900px) {
+  .nav {
+    padding-top: 8%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .admin-sidebarList .adminSingle-row {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 15px;
+    position: relative;
+  }
+}
+
+.comitteeMessage {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  background: linear-gradient(to right, #525252b0, #797979b0);
+  width: 100%;
+  color: white;
+  box-shadow: 4px 4px #afafaf;
+  opacity: 0.9;
+  padding: 22px;
+  line-height: 1.8;
+}
+.comitteeMessage h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 40px;
+}
+
+.comitteeMessage p {
+  font-size: 20px;
+  font-family: "roboto";
+}
+
+.adminBody .container {
+  max-width: 1500px;
+  padding: 5% 3%;
+  height: auto;
+}

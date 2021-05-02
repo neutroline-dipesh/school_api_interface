@@ -1,0 +1,66 @@
+.events {
+  grid-area: events;
+  padding: 1rem;
+}
+
+.events h2 {
+  font-size: 30px;
+  margin-top: 3%;
+  margin-left: 32%;
+  margin-bottom: 9%;
+}
+
+.events .card {
+  height: 20vh;
+  border: 5px solid #cad5e7;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.events .card:hover {
+  cursor: pointer;
+  background-color: #d6d3d3;
+}
+
+.events .card-header {
+  background-color: rgb(239 51 51);
+  color: #fff;
+  /* position: absolute; */
+  padding: 2%;
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.events .card-body {
+  position: absolute;
+  margin-left: 30%;
+}
+
+.events .card-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+.events p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.full-events {
+  text-align: center;
+  padding-top: 1rem;
+  text-decoration: none;
+}
+
+.events .full-events a {
+  color: #2266de;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+.events a {
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  /* padding-top: 40%; */
+}

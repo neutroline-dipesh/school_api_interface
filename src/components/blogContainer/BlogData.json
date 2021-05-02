@@ -1,0 +1,49 @@
+{
+  "blogs": [
+    {
+      "name": "Yurnero Sven ",
+      "imageurl": "https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "cardmediatitle": "Contemplative Reptile",
+      "title": "Coding- A way of life",
+      "shortdescription": " The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "description": "    The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun. The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "avatarsrc": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "date": "August 5, 2020",
+      "email": "yurnero@gmail.com",
+      "usestate": "false"
+    },
+    {
+      "name": "Mira Chan ",
+      "imageurl": "https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "cardmediatitle": "Contemplative Reptile",
+      "title": "React Router",
+      "shortdescription": " The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "description": "    The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "avatarsrc": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80",
+      "date": "August 5, 2020",
+      "email": "mira@gmail.com"
+    },
+    {
+      "name": "Nami Chan",
+      "imageurl": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "cardmediatitle": "Contemplative Reptile",
+      "title": "Life is beautiful",
+      "shortdescription": " The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "description": "    The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "avatarsrc": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "date": "August 5, 2020",
+      "email": "nami@gmail.com"
+    },
+    {
+      "name": "Invo ker",
+      "imageurl": "https://images.pexels.com/photos/325111/pexels-photo-325111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "cardmediatitle": "Contemplative Reptile",
+      "title": "Modern day life",
+      "shortdescription": " The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "description": "    The most traditional page on any blog is the About page. This page tells new visitors to your blog what it is about, who you are and why you have a blog about theparticular topic. Depending on your niche and your    style, the information you provide can be “all business” or personal and fun.",
+      "avatarsrc": "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80",
+      "date": "August 5, 2020",
+      "email": "voker@gmail.com"
+    }
+  ]
+}

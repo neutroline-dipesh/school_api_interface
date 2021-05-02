@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "heading": "Announcement !",
+      "message":
+        " The school will be conducting two shifts i.e. Morning and Evening from today onwards."
+    },
+    {
+      "id": 2,
+      "heading": "Admission Open!",
+      "message": " The School will remain closed till 11th Kartik."
+    }
+]

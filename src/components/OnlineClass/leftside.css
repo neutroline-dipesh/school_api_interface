@@ -1,0 +1,10 @@
+.userInput > input {
+  margin-left: auto;
+}
+.passwordInput > input {
+  margin-left: auto;
+}
+
+.Login-formOC h5 {
+  font-weight: 700;
+}

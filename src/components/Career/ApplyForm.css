@@ -1,0 +1,31 @@
+.ApplyForm .bg-info {
+  background-color: #42adf5 !important;
+}
+
+.applyform-message{
+  padding-left: 23px;
+}
+
+.careerErrorMessage{
+  margin: 3px;
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+
+.applyform-gender{
+  min-height: 3rem;
+  padding-left: 1.375rem;
+}
+
+.careerFileUpload{
+  margin: 9px;
+  color: #101215;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 765px) {
+  .mbs {
+    margin-bottom: 20px;
+  }
+}

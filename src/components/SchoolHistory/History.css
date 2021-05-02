@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.history-sidebarList .link-modified {
+  text-decoration: none;
+}
+
+.historyPage {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 250px 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1.6fr;
+  grid-template-areas:
+    "sidebar aboutUsBody aboutUsBody aboutUsBody"
+    "sidebar aboutUsBody aboutUsBody aboutUsBody";
+}
+
+.history-sidebar {
+  height: auto;
+  background-color: #1886de;
+  opacity: 0.8;
+  grid-area: sidebar;
+  padding-top: 50%;
+}
+
+.historyBody {
+  grid-area: aboutUsBody;
+}
+.historyBody .jumbotron {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 1em 1.5em;
+  background-color: #fff;
+}
+.historyBody .jumbotron p {
+  font-size: 1em;
+  text-align: center;
+  font-style: normal;
+  font-family: "Noto Serif", sans-serif;
+
+}
+
+.historyBody .history-heading {
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  justify-content: center;
+  font-family: "Open Sans Condensed";
+  color: #ffcb06;
+}
+
+.historyBody img {
+  height: 60vh;
+  width: auto;
+  padding-bottom: 10px;
+}
+
+.history-sidebarList {
+  width: 100%;
+  height: 100%;
+}
+
+.history-sidebarList .single-row {
+  color: white;
+  height: 35px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+  padding-left: 20px;
+  font-size: small;
+  position: relative;
+}
+
+.history-sidebarList .single-row:hover {
+  color: #f3e21b;
+  cursor: pointer;
+}
+
+.single-row .active span {
+  color: #f4d03f;
+}
+.single-row span {
+  color: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+  .history-sidebar {
+    display: none;
+  }
+
+  .historyPage {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " aboutUsBody  aboutUsBody ";
+  }
+
+  .historyBody img {
+    height: 100%;
+    width: 100%;
+    float: left;
+    min-width: 0%;
+  }
+
+  .jumbotron h1 {
+    font-size: 25px;
+  }
+  .historyBody .jumbotron h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .historyBody .jumbotron p {
+    font-size: 20px;
+    text-align: justify;
+    font-style: normal;
+    font-family: "Noto Serif", sans-serif;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .history-sidebarList .single-row {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    font-size: small;
+    position: relative;
+  }
+}

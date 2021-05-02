@@ -1,0 +1,39 @@
+.notice-bar {
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgb(22, 137, 221) 0%,
+    rgba(73, 63, 252, 1) 100%
+  );
+  color: aliceblue;
+}
+
+.notice-bar h2 {
+  font-family: "Open Sans Condensed";
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .notice-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(
+      90deg,
+      rgb(22 183 221) 0%,
+      rgb(63 164 252) 100%
+    );
+    color: aliceblue;
+  }
+  .notice-bar h2 {
+    font-family: "Open Sans Condensed";
+
+    font-size: 2em;
+  }
+}
