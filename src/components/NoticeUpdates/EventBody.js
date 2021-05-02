@@ -1,20 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardHeader, CardBody, CardTitle, CardText } from "reactstrap";
 import NoticeAndEvent from "./NoticeAndEvent.json";
 import "./EventBody.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function EventBody() {
   const events = NoticeAndEvent.events;
+
+  //getting data form database
+  const [event, setEvent] = useState([]);
+  const fetchData = async () => {
+    axios.get("http://localhost:4000/event/").then((response) => {
+      if (response.data) {
+        setEvent(response.data.data);
+      } else {
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  console.log(event);
   return (
     <div className="events">
       <h2 className="fas fa-calendar-alt"> Events </h2>
       <br />
-      {events.map((eve, index) => {
+      {event.map((item, index) => {
         return (
           <Card key={index}>
             <CardHeader>
-              {eve.date}
+              {item.event_date}
               <br />
               <br />
               <br />
@@ -24,15 +41,15 @@ function EventBody() {
               </a>
             </CardHeader>
             <CardBody>
-              <CardTitle>{eve.heading}</CardTitle>
-              <CardText>{eve.description}</CardText>
+              <CardTitle>{item.title}</CardTitle>
+              <CardText>{item.event_desc}</CardText>
             </CardBody>
           </Card>
         );
       })}
 
       <div className="full-events">
-      <Link to="/newsAndEvents"> View all events...</Link>
+        <Link to="/newsAndEvents"> View all events...</Link>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Buttons/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,6 +7,7 @@ import { common } from "../../assets/js/common";
 import datas from "./announcement.json";
 
 import styled from "styled-components";
+import axios from "axios";
 
 const AnnouncementContainer = styled.div`
   display: flex;
@@ -132,15 +133,32 @@ function Announcement() {
       },
     ],
   };
+
+  //getting data form database
+  const [announcement, setAnnouncement] = useState([]);
+  const fetchData = async () => {
+    axios.get("http://localhost:4000/announcement/").then((response) => {
+      if (response.data) {
+        setAnnouncement(response.data.data);
+      } else {
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  console.log(announcement);
+
   return (
     <AnnouncementContainer>
       <Slider {...settings}>
-        {schoolMessage.map((message) => {
+        {announcement.map((item) => {
           return (
-            <div className="message-body" key={message.id}>
-              <h1>{message.heading}</h1>
+            <div className="message-body" key={item._id}>
+              <h1>{item.announcement}</h1>
               <br></br>
-              <p> {message.message}</p>
+              <p> {item.announcement_des}</p>
               <br></br>
             </div>
           );

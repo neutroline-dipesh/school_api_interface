@@ -146,13 +146,13 @@ export const BlogModal = (props) => {
                 School's Blog
               </h1>
               <ModalImg
-                src={blogs[props.selectedId].imageurl}
-                alt={blogs[props.selectedId].name}
+                src={blogs[props.selectedId].image}
+                alt={blogs[props.selectedId].title}
               />
               <ModalContent>
                 <h3>{blogs[props.selectedId].title}</h3>
-                <a>{blogs[props.selectedId].date}</a>
-                <p>{blogs[props.selectedId].description}</p>
+                <a>{blogs[props.selectedId].posted_date}</a>
+                <p>{blogs[props.selectedId].article}</p>
                 <ModalFooter>
                   <h6>
                     <EmailIcon color="primary" />

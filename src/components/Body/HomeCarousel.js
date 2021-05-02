@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import LandingCarousel from "../NewsAndEvents/Carousel";
+import axios from "axios";
 
 const HomeCarouselContainer = styled.div`
   box-sizing: border-box;
@@ -30,34 +31,51 @@ const HomeCarouselContainer = styled.div`
   }
 `;
 
-const items = [
-  {
-    src: "./images/school-2.jpg",
-    altText: "School-2",
-    key: "1",
-    caption: "",
-    header: "",
-  },
-  {
-    src: "./images/school-1.jpg",
-    altText: "School-1",
-    key: "2",
-    caption: "",
-    header: "",
-  },
-  {
-    src: "./images/school-3.jpg",
-    altText: "School-3",
-    key: "3",
-    caption: "",
-    header: "",
-  },
-];
+// const items = [
+//   {
+//     src: "./images/school-2.jpg",
+//     altText: "School-2",
+//     key: "1",
+//     caption: "hello",
+//     header: "world",
+//   },
+//   {
+//     src: "./images/school-1.jpg",
+//     altText: "School-1",
+//     key: "2",
+//     caption: "",
+//     header: "",
+//   },
+//   {
+//     src: "./images/school-3.jpg",
+//     altText: "School-3",
+//     key: "3",
+//     caption: "",
+//     header: "",
+//   },
+// ];
 
 function HomeCarousel() {
+  //getting data form database
+  const [homePageImage, setHomePageImage] = useState([]);
+  const fetchData = async () => {
+    axios.get("http://localhost:4000/homePageImage/").then((response) => {
+      if (response.data) {
+        setHomePageImage(response.data.data);
+      } else {
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  console.log("hello");
+  console.log(homePageImage);
+  console.log("world");
   return (
     <HomeCarouselContainer>
-      <LandingCarousel items={items} />
+      <LandingCarousel items={homePageImage} />
     </HomeCarouselContainer>
   );
 }

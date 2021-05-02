@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./NoticeBody.css";
 import { Link } from "react-router-dom";
 import {
@@ -14,6 +14,7 @@ import EventBody from "./EventBody";
 import { HiSpeakerphone } from "react-icons/hi";
 import DefaultMidblock from "./DefaultMidblock";
 import MidNotice from "./MidNotice";
+import axios from "axios";
 
 function NoticeBody() {
   const [mouseOver, setMouseOver] = useState(false);
@@ -29,12 +30,28 @@ function NoticeBody() {
     setMouseOver(false);
   };
 
+  //getting data form database
+  const [notice, setNotice] = useState([]);
+  const fetchData = async () => {
+    axios.get("http://localhost:4000/notice/").then((response) => {
+      if (response.data) {
+        setNotice(response.data.data);
+      } else {
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  // console.log(notice);
+
   return (
     <div className="noticeandupdate">
       <div className="notices">
         <h2 className="fas fa-bell"> Notices </h2>
         <br />
-        {notices.map((item, index) => {
+        {notice.map((item, index) => {
           return (
             <Card
               key={index}
@@ -42,7 +59,7 @@ function NoticeBody() {
               onMouseOut={handleMouseOut}
             >
               <CardHeader>
-                {item.date}
+                {item.notice_date}
                 <br />
                 <br />
                 <br />
@@ -52,8 +69,8 @@ function NoticeBody() {
                 </a>
               </CardHeader>
               <CardBody>
-                <CardTitle>{item.heading}</CardTitle>
-                <CardText>{item.description}</CardText>
+                <CardTitle>{item.title}</CardTitle>
+                <CardText>{item.notice_desc}</CardText>
               </CardBody>
             </Card>
           );
