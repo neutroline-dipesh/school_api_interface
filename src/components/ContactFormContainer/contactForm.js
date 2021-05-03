@@ -1,6 +1,7 @@
 import emailjs from "emailjs-com";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Contact from "../contactForm/contactForm";
+import axios from "axios";
 
 export default function ContactUs() {
   function sendEmail(e) {
@@ -23,6 +24,34 @@ export default function ContactUs() {
       );
     e.target.reset();
   }
+
+  //for post in database
+  const [post, setPost] = useState([
+    {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  ]);
+  const { name, email, subject, message } = post;
+
+  const changeHandler = (e) => {
+    setPost({ ...post, [e.target.name]: e.target.value });
+  };
+  console.log(post);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    axios
+      // .header({ "Content-Type": "application/json" })
+      .post("http://localhost:4000/contact/", post)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -52,7 +81,8 @@ export default function ContactUs() {
             <h2 className="text-dark  p-2 text-center">Contact Us</h2>
           </div>
 
-          <form onSubmit={sendEmail}>
+          {/* <form onSubmit={sendEmail}> */}
+          <form onSubmit={submitHandler}>
             <div className="row pt-3 mx-auto">
               <div className="col-8 form-group mx-auto">
                 <input
@@ -60,9 +90,11 @@ export default function ContactUs() {
                   className="form-control"
                   placeholder="Name"
                   name="name"
+                  value={name}
+                  onChange={changeHandler}
                   required
                   // pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  pattern="(?=.*\s)(?=.*[a-z])(?=.*[A-Z]).{5,}"
+                  // pattern="(?=.*\s)(?=.*[a-z])(?=.*[A-Z]).{5,}"
                   minlength="5"
                 />
               </div>
@@ -72,7 +104,9 @@ export default function ContactUs() {
                   className="form-control"
                   placeholder="Email Address"
                   name="email"
-                  pattern=".{13,}"
+                  value={email}
+                  onChange={changeHandler}
+                  // pattern=".{13,}"
                   required
                 />
               </div>
@@ -82,7 +116,9 @@ export default function ContactUs() {
                   className="form-control"
                   placeholder="Subject"
                   name="subject"
-                  pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  value={subject}
+                  onChange={changeHandler}
+                  // pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   required
                 />
               </div>
@@ -94,7 +130,9 @@ export default function ContactUs() {
                   rows="8"
                   placeholder="Your message"
                   name="message"
-                  pattern="(?=.*[a-z])(?=.*[A-Z]).{25,}"
+                  value={message}
+                  onChange={changeHandler}
+                  // pattern="(?=.*[a-z])(?=.*[A-Z]).{25,}"
                   minlength="25"
                   required
                 ></textarea>
